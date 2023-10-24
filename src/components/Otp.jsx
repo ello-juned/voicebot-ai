@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 
 const baseUrl =
-  "https://1da7-2401-4900-3b38-e59c-3cf2-2cdf-ca22-a775.ngrok-free.app";
+  "https://94aa-2401-4900-3b32-182-ed5f-9ddc-107f-7d35.ngrok-free.app/";
 
 const OTPVerification = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
