@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import Loader from "./Loader";
 
-const baseUrl =
-  "https://76aa-2401-4900-3b36-4199-6837-a32e-42f1-cdcf.ngrok-free.app";
+const baseUrl = "https://backend-voicebot-ai.onrender.com/";
 
 const OTPVerification = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
