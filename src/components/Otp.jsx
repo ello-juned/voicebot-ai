@@ -48,7 +48,7 @@ const OTPVerification = () => {
               placeholder="Phone Number"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
-              className="w-full border rounded-md p-2 mb-4"
+              className="w-full border rounded-md p-2 mb-4 text-black"
             />
             <button
               disabled={isValid}
