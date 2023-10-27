@@ -3,9 +3,10 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import Loader from "./Loader";
 
-const baseUrl = "https://backend-voicebot-ai.onrender.com/";
-
 const OTPVerification = () => {
+  const baseUrl = import.meta.env.VITE_REACT_APP_SERVER_URL;
+
+  console.log("baseUrl", baseUrl);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [loading, setLoading] = useState(false);
