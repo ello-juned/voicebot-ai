@@ -39,8 +39,8 @@ const OTPVerification = () => {
 
   return (
     <>
-      <div className="min-h-screen flex items-center justify-center  bg-blue-100 ">
-        <div className="max-w-md  p-5 bg-white shadow-xl  border-2 rounded-xl">
+      <div className="min-h-screen flex items-center justify-center text-white  ">
+        <div className="max-w-md  p-10  shadow-xl  border-2 rounded-xl  ">
           <div className="">
             <h2 className="text-2xl font-bold mb-4">Enter Your Phone Number</h2>
             <input
