@@ -6,7 +6,6 @@ import Loader from "./Loader";
 const OTPVerification = () => {
   const baseUrl = import.meta.env.VITE_REACT_APP_SERVER_URL;
 
-  console.log("baseUrl", baseUrl);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -41,7 +40,7 @@ const OTPVerification = () => {
   return (
     <>
       <div className="min-h-screen flex items-center justify-center text-white  ">
-        <div className="max-w-md  p-10  shadow-xl  border-2 rounded-xl  ">
+        <div className="max-w-md  p-10  shadow-xl  border-2 rounded-xl ">
           <div className="">
             <h2 className="text-2xl font-bold mb-4">Enter Your Phone Number</h2>
             <input
