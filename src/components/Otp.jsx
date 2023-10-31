@@ -12,24 +12,30 @@ const OTPVerification = () => {
   const [isCallConnected, setISCallConnected] = useState(false);
 
   const onCall = async () => {
-    setLoading(true);
+    if (!phoneNumber.includes("+")) {
+      toast.error(
+        "please enter  phone number with country code, eg +61543456789 or +919209986878"
+      );
+    } else {
+      setLoading(true);
 
-    try {
-      const response = await axios.post(baseUrl, { phoneNumber });
-      if (response.status === 200) {
-        toast.success(response.data.message);
-        setIsValid(true);
-        setISCallConnected(true);
+      try {
+        const response = await axios.post(baseUrl, { phoneNumber });
+        if (response.status === 200) {
+          toast.success(response.data.message);
+          setIsValid(true);
+          setISCallConnected(true);
+        }
+        console.log("response", response);
+        setLoading(false);
+      } catch (error) {
+        console.log("error", error);
+        if (error.response) {
+          toast.error(error.response.data.message);
+        }
+        setIsValid(false);
+        setLoading(false);
       }
-      console.log("response", response);
-      setLoading(false);
-    } catch (error) {
-      console.log("error", error);
-      if (error.response) {
-        toast.error(error.response.data.message);
-      }
-      setIsValid(false);
-      setLoading(false);
     }
   };
 
